@@ -5,6 +5,7 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.DateUtils;
@@ -30,7 +31,8 @@ public class Activity_3 extends AppCompatActivity {
         DatabaseHandler db = new DatabaseHandler(Activity_3.this);
         List<Choices> choices = db.getAllContacts();
         ToggleButton active = (ToggleButton) findViewById(R.id.active);
-        SharedPreferences preferences = getSharedPreferences("Answers", 0);
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
+        final SharedPreferences.Editor editor = preferences.edit();
         RadioButton morning = (RadioButton) findViewById(R.id.morning);
         RadioButton noon = (RadioButton) findViewById(R.id.noon);
         RadioButton night = (RadioButton) findViewById(R.id.night);
@@ -63,11 +65,19 @@ public class Activity_3 extends AppCompatActivity {
         }
 
 
-        final SharedPreferences.Editor editor = preferences.edit();
         for (Choices cn : choices) {
             if((cn.getType().equals("Run")) && (cn.getChosen().equals("true") )) {
                 active.setChecked(true);
                 System.out.println("Is checked" + active);
+            }
+            else if ((cn.getType().equals("Run")) && (cn.getChosen().equals("false") )){
+                editor.putBoolean("checked", false);
+                editor.putBoolean("checked2", false);
+                editor.putBoolean("checked3", false);
+                editor.putBoolean("checked4", false);
+                editor.putBoolean("checked5", false);
+                editor.putBoolean("checked6", false);
+                editor.apply();
             }
         }
 
