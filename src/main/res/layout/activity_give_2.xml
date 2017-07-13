@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    app:layout_collapseParallaxMultiplier="1.0"
+    android:paddingLeft="10dp">
+
+    <TextView
+        android:text="Να είμαι ευγενικός με τους γύρω μου"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:paddingTop="10dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/down"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="468dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:text="Ενεργό"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView5"
+                android:textAppearance="@style/TextAppearance.AppCompat"
+                android:textSize="18sp" />
+
+
+
+            <ToggleButton
+                android:text="ToggleButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/active" />
+
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:text="Ώρα της ημέρας"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView6"
+                    android:layout_weight="0.07"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+                <RadioGroup
+                    android:layout_width="315dp"
+                    android:layout_height="140dp"
+                    android:id="@+id/frequency">
+
+                    <RadioButton
+                        android:text="Πρωί"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/morning"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="Μεσημέρι"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/noon" />
+
+                    <RadioButton
+                        android:text="Βράδυ"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/night"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+            </LinearLayout>
+            <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:text="Συχνότητα"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView7"
+                    android:layout_weight="0.07"
+                    android:textAppearance="@style/TextAppearance.AppCompat" />
+
+                <RadioGroup
+                    android:layout_width="315dp"
+                    android:layout_height="140dp"
+                    android:id="@+id/frequency1">
+
+                    <RadioButton
+                        android:text="1/μέρα"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/onetime"
+                        android:layout_weight="1" />
+
+                    <RadioButton
+                        android:text="2/μέρα"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/twotime" />
+
+                    <RadioButton
+                        android:text="1/εβδομάδα"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/oneweek"
+                        android:layout_weight="1" />
+
+                </RadioGroup>
+
+                <Button
+                    android:text="ΑΠΟΘΗΚΕΥΣΗ"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/save"
+                    android:layout_weight="0.07" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

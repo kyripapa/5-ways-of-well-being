@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+    <TextView android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5 τρόποι για ψυχική ευεξία"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:fontFamily="sans-serif"
+        android:textSize="24sp"
+        android:layout_weight="0.05" />
+
+    <TextView
+        android:text="Τι έκανα;"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_done"
+        android:drawableRight="@drawable/next"
+        android:layout_weight="0.05"
+        android:paddingTop="10dp"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:paddingLeft="10dp"
+        android:onClick="actionsPage"/>
+
+    <TextView
+        android:text="Επιλογές"
+        android:layout_width="match_parent"
+        android:layout_height="49dp"
+        android:id="@+id/home_choice"
+        android:drawableRight="@drawable/next"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:onClick="preferencesPage"
+        android:paddingLeft="10dp" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.28" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Ξεκινήστε την εφαρμογή πατώντας τις επιλογές"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_weight="0.05"
+        android:textSize="18sp"
+        android:textAlignment="center" />
+
+</LinearLayout>

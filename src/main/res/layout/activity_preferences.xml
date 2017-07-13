@@ -1,0 +1,88 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    >
+
+
+    <TextView
+        android:text="Επιλογές"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:paddingTop="10dp" />
+
+    <TextView
+        android:id="@+id/social"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableRight="@drawable/next"
+        android:drawablePadding="5dp"
+        android:text="ΚΟΙΝΩΝΙΚΗ ΔΙΑΣΥΝΔΕΣΗ"
+        android:textSize="18sp"
+        android:layout_weight="0.04"
+        android:gravity="center_vertical"
+        android:background="@android:color/holo_green_light"
+        android:onClick="choiceSocial"/>
+
+    <TextView
+        android:id="@+id/learn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableRight="@drawable/next"
+        android:drawablePadding="5dp"
+        android:text="ΕΚΜΑΘΗΣΗ"
+        android:textSize="18sp"
+        android:layout_weight="0.04"
+        android:gravity="center_vertical"
+        android:background="@android:color/holo_blue_dark"
+        android:onClick="choiceLearning"/>
+
+    <TextView
+        android:id="@+id/activity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableRight="@drawable/next"
+        android:drawablePadding="5dp"
+        android:text="ΦΥΣΙΚΗ ΔΡΑΣΤΗΡΙΟΤΗΤΑ"
+        android:textSize="18sp"
+        android:layout_weight="0.04"
+        android:gravity="center_vertical"
+        android:background="@android:color/holo_orange_light"
+        android:onClick="choiceActivity"/>
+    <TextView
+        android:id="@+id/give"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableRight="@drawable/next"
+        android:drawablePadding="5dp"
+        android:text="ΠΡΟΣΦΟΡΑ"
+        android:textSize="18sp"
+        android:layout_weight="0.04"
+        android:gravity="center_vertical"
+        android:background="@android:color/holo_red_light"
+        android:onClick="choiceGive"/>
+    <TextView
+        android:id="@+id/aware"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:drawableRight="@drawable/next"
+        android:drawablePadding="5dp"
+        android:text="ΔΩΣΕ ΠΡΟΣΟΧΗ"
+        android:textSize="18sp"
+        android:layout_weight="0.04"
+        android:gravity="center_vertical"
+        android:background="@android:color/holo_blue_light"
+        android:onClick="choiceAware"/>
+</LinearLayout>

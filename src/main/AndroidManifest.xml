@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.a5ways">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Preferences"
+            android:label="@string/title_activity_preferences"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ChoiceSocial" />
+        <activity android:name=".ChoiceLearning" />
+        <activity android:name=".ChoiceActivity" />
+        <activity android:name=".ChoiceGive" />
+        <activity android:name=".ChoiceAware" />
+        <activity android:name=".Social_1" />
+        <activity android:name=".Social_2" />
+        <activity android:name=".Social_3" />
+        <activity android:name=".Social_4" />
+        <activity android:name=".Social_5" />
+        <activity android:name=".ActionsPage" />
+
+        <receiver android:name=".Receiver" />
+
+        <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+
+        <activity android:name=".Learning_1" />
+        <activity android:name=".Learning_2" />
+        <activity android:name=".Learning_3" />
+        <activity android:name=".Learning_4" />
+        <activity android:name=".Learning_5" />
+        <activity android:name=".Activity_1" />
+        <activity android:name=".Activity_2" />
+        <activity android:name=".Activity_3" />
+        <activity android:name=".Activity_4" />
+        <activity android:name=".Activity_5" />
+        <activity android:name=".Give_1" />
+        <activity android:name=".Give_2" />
+        <activity android:name=".Give_3" />
+        <activity android:name=".Give_4" />
+        <activity android:name=".Give_5" />
+        <activity android:name=".Aware_1"></activity>
+        <activity android:name=".Aware_2"></activity>
+        <activity android:name=".Aware_3"></activity>
+        <activity android:name=".Aware_4"></activity>
+        <activity android:name=".Aware_5"></activity>
+    </application>
+
+</manifest>

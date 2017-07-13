@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="1"
+    app:layout_collapseParallaxMultiplier="1.0">
+
+    <TextView
+        android:text="Επιλέξτε ποιες από τις παρακάτω επιλογές θέλετε να κάνετε καθημερινά"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:paddingTop="10dp" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/down"
+        />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+
+                android:text="** Τηλέφωνο σε φίλο"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/social_1"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/down"
+                android:background="@android:color/transparent"
+                android:onClick="Social_1"
+                android:paddingBottom="10dp"
+                android:textAllCaps="false" />
+            <Button
+
+                android:text="*** Καφές με φίλους"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/social_2"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/down"
+                android:background="@android:color/transparent"
+                android:onClick="Social_2"
+                android:paddingBottom="10dp"
+                android:textAllCaps="false" />
+            <Button
+
+                android:text="* Τηλέφωνο σε οικογένεια"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/social_3"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/down"
+                android:background="@android:color/transparent"
+                android:onClick="Social_3"
+                android:paddingBottom="10dp"
+                android:textAllCaps="false" />
+
+            <Button
+
+                android:text="* Δείπνο με το σύντροφο"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/social_4"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/down"
+                android:background="@android:color/transparent"
+                android:onClick="Social_4"
+                android:paddingBottom="10dp"
+                android:textAllCaps="false" />
+
+            <Button
+
+                android:text="** Διάλειμμα με συναφέλφους"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/social_5"
+                android:gravity="center_vertical"
+                android:drawableRight="@drawable/down"
+                android:background="@android:color/transparent"
+                android:onClick="Social_5"
+                android:paddingBottom="10dp"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>
