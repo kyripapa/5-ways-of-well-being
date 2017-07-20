@@ -120,7 +120,7 @@ public class ActionsPage extends AppCompatActivity {
         }
 
 /*Set preferences for checkboxes*/
-       final CheckBox checkBox =  (CheckBox) findViewById(R.id.call);
+       final CheckBox  checkBox =  (CheckBox) findViewById(R.id.call);
        final CheckBox checkBox2 =  (CheckBox) findViewById(R.id.coffee);
        final CheckBox checkBox3 =  (CheckBox) findViewById(R.id.call_family);
        final CheckBox checkBox4 =  (CheckBox) findViewById(R.id.diner);
@@ -148,11 +148,26 @@ public class ActionsPage extends AppCompatActivity {
 
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(this);
         final SharedPreferences.Editor editor = preferences.edit();
-        Calendar mDate = Calendar.getInstance();
-        DateUtils.isToday(mDate.getTimeInMillis());
-        System.out.println("Date: " + DateUtils.isToday(mDate.getTimeInMillis()));
+        
+       /* Calendar c1 = Calendar.getInstance(); // today
+        c1.add(Calendar.DAY_OF_YEAR, -1); //yesterday
+        System.out.println("Date:" + c1);
+        System.out.println("Date:" + c1);
+        Calendar c2 = Calendar.getInstance(); // today
+        if(c1 != c2) {
+            System.out.println("Date:" + c1);
 
-        if(preferences.contains("checked") && preferences.getBoolean("checked",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+            preferences.edit().remove("checkedAction").commit();
+            preferences.edit().remove("checkedAction2").commit();
+            preferences.edit().remove("checkedAction3").commit();
+            preferences.edit().remove("checkedAction4").commit();
+            preferences.edit().remove("checkedAction5").commit();
+            preferences.edit().remove("checkedAction6").commit();
+            preferences.edit().remove("checkedAction7").commit();
+
+        }*/
+
+        if(preferences.contains("checkedAction") && preferences.getBoolean("checkedAction",false) == true ) {
             checkBox.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -164,15 +179,15 @@ public class ActionsPage extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox.isChecked()) {
-                    editor.putBoolean("checked", true);
+                    editor.putBoolean("checkedAction", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked", false);
+                    editor.putBoolean("checkedAction", false);
                     editor.apply();
                 }
             }
         });
-        if(preferences.contains("checked2") && preferences.getBoolean("checked2",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction2") && preferences.getBoolean("checkedAction2",false) == true ) {
             checkBox2.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -184,15 +199,15 @@ public class ActionsPage extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox2.isChecked()) {
-                    editor.putBoolean("checked2", true);
+                    editor.putBoolean("checkedAction2", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked2", false);
+                    editor.putBoolean("checkedAction2", false);
                     editor.apply();
                 }
             }
         });
- if(preferences.contains("checked3") && preferences.getBoolean("checked3",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+ if(preferences.contains("checkedAction3") && preferences.getBoolean("checkedAction3",false) == true) {
             checkBox3.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -204,15 +219,15 @@ public class ActionsPage extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox3.isChecked()) {
-                    editor.putBoolean("checked3", true);
+                    editor.putBoolean("checkedAction3", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked3", false);
+                    editor.putBoolean("checkedAction3", false);
                     editor.apply();
                 }
             }
         });
- if(preferences.contains("checked4") && preferences.getBoolean("checked4",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+ if(preferences.contains("checkedAction4") && preferences.getBoolean("checkedAction4",false) == true) {
             checkBox4.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -224,15 +239,15 @@ public class ActionsPage extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox4.isChecked()) {
-                    editor.putBoolean("checked4", true);
+                    editor.putBoolean("checkedAction4", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked4", false);
+                    editor.putBoolean("checkedAction4", false);
                     editor.apply();
                 }
             }
         });
- if(preferences.contains("checked5") && preferences.getBoolean("checked5",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+ if(preferences.contains("checkedAction5") && preferences.getBoolean("checkedAction5",false) == true) {
             checkBox5.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -244,17 +259,17 @@ public class ActionsPage extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox5.isChecked()) {
-                    editor.putBoolean("checked5", true);
+                    editor.putBoolean("checkedAction5", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked5", false);
+                    editor.putBoolean("checkedAction5", false);
                     editor.apply();
                 }
             }
         });
 /*Set preferences for checkboxes END*/
 
-        if(preferences.contains("checked6") && preferences.getBoolean("checked6",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction6") && preferences.getBoolean("checkedAction6",false) == true) {
             checkBox6.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -266,15 +281,15 @@ public class ActionsPage extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox6.isChecked()) {
-                    editor.putBoolean("checked6", true);
+                    editor.putBoolean("checkedAction6", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked6", false);
+                    editor.putBoolean("checkedAction6", false);
                     editor.apply();
                 }
             }
         });
-        if(preferences.contains("checked7") && preferences.getBoolean("checked7",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction7") && preferences.getBoolean("checkedAction7",false) == true) {
             checkBox7.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -286,15 +301,15 @@ public class ActionsPage extends AppCompatActivity {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox7.isChecked()) {
-                    editor.putBoolean("checked7", true);
+                    editor.putBoolean("checkedAction7", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked7", false);
+                    editor.putBoolean("checkedAction7", false);
                     editor.apply();
                 }
             }
         });
-if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+if(preferences.contains("checkedAction8") && preferences.getBoolean("checkedAction8",false) == true) {
             checkBox8.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -306,15 +321,15 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox8.isChecked()) {
-                    editor.putBoolean("checked8", true);
+                    editor.putBoolean("checkedAction8", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked8", false);
+                    editor.putBoolean("checkedAction8", false);
                     editor.apply();
                 }
             }
         });
-        if(preferences.contains("checked9") && preferences.getBoolean("checked9",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction9") && preferences.getBoolean("checkedAction9",false) == true) {
             checkBox9.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -326,15 +341,15 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox9.isChecked()) {
-                    editor.putBoolean("checked9", true);
+                    editor.putBoolean("checkedAction9", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked9", false);
+                    editor.putBoolean("checkedAction9", false);
                     editor.apply();
                 }
             }
         });
- if(preferences.contains("checked10") && preferences.getBoolean("checked10",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+ if(preferences.contains("checkedAction10") && preferences.getBoolean("checkedAction10",false) == true) {
             checkBox10.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -346,15 +361,15 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox10.isChecked()) {
-                    editor.putBoolean("checked10", true);
+                    editor.putBoolean("checkedAction10", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked10", false);
+                    editor.putBoolean("checkedAction10", false);
                     editor.apply();
                 }
             }
         });
-        if(preferences.contains("checked11") && preferences.getBoolean("checked11",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction11") && preferences.getBoolean("checkedAction11",false) == true) {
             checkBox11.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -366,15 +381,15 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox11.isChecked()) {
-                    editor.putBoolean("checked11", true);
+                    editor.putBoolean("checkedAction11", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked11", false);
+                    editor.putBoolean("checkedAction11", false);
                     editor.apply();
                 }
             }
         });
-        if(preferences.contains("checked12") && preferences.getBoolean("checked12",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction12") && preferences.getBoolean("checkedAction12",false) == true) {
             checkBox12.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -386,15 +401,15 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox12.isChecked()) {
-                    editor.putBoolean("checked12", true);
+                    editor.putBoolean("checkedAction12", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked12", false);
+                    editor.putBoolean("checkedAction12", false);
                     editor.apply();
                 }
             }
         }); 
-        if(preferences.contains("checked13") && preferences.getBoolean("checked13",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction13") && preferences.getBoolean("checkedAction13",false) == true) {
             checkBox13.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -406,15 +421,15 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox13.isChecked()) {
-                    editor.putBoolean("checked13", true);
+                    editor.putBoolean("checkedAction13", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked13", false);
+                    editor.putBoolean("checkedAction13", false);
                     editor.apply();
                 }
             }
         }); 
-        if(preferences.contains("checked14") && preferences.getBoolean("checked14",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction14") && preferences.getBoolean("checkedAction14",false) == true) {
             checkBox14.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -426,15 +441,15 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox14.isChecked()) {
-                    editor.putBoolean("checked14", true);
+                    editor.putBoolean("checkedAction14", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked14", false);
+                    editor.putBoolean("checkedAction14", false);
                     editor.apply();
                 }
             }
         });
-        if(preferences.contains("checked15") && preferences.getBoolean("checked15",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction15") && preferences.getBoolean("checkedAction15",false) == true) {
             checkBox15.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -446,15 +461,15 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox15.isChecked()) {
-                    editor.putBoolean("checked15", true);
+                    editor.putBoolean("checkedAction15", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked15", false);
+                    editor.putBoolean("checkedAction15", false);
                     editor.apply();
                 }
             }
         }); 
-        if(preferences.contains("checked16") && preferences.getBoolean("checked16",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction16") && preferences.getBoolean("checkedAction16",false) == true) {
             checkBox16.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -466,15 +481,15 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox16.isChecked()) {
-                    editor.putBoolean("checked16", true);
+                    editor.putBoolean("checkedAction16", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked16", false);
+                    editor.putBoolean("checkedAction16", false);
                     editor.apply();
                 }
             }
         });
- if(preferences.contains("checked17") && preferences.getBoolean("checked17",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+ if(preferences.contains("checkedAction17") && preferences.getBoolean("checkedAction17",false) == true) {
             checkBox17.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -486,16 +501,16 @@ if(preferences.contains("checked8") && preferences.getBoolean("checked8",false) 
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox17.isChecked()) {
-                    editor.putBoolean("checked17", true);
+                    editor.putBoolean("checkedAction17", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked17", false);
+                    editor.putBoolean("checkedAction17", false);
                     editor.apply();
                 }
             }
         });
 
-if(preferences.contains("checked18") && preferences.getBoolean("checked18",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+if(preferences.contains("checkedAction18") && preferences.getBoolean("checkedAction18",false) == true) {
             checkBox18.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -507,15 +522,15 @@ if(preferences.contains("checked18") && preferences.getBoolean("checked18",false
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox18.isChecked()) {
-                    editor.putBoolean("checked18", true);
+                    editor.putBoolean("checkedAction18", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked18", false);
+                    editor.putBoolean("checkedAction18", false);
                     editor.apply();
                 }
             }
         });
-        if(preferences.contains("checked19") && preferences.getBoolean("checked19",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction19") && preferences.getBoolean("checkedAction19",false) == true) {
             checkBox19.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -527,15 +542,15 @@ if(preferences.contains("checked18") && preferences.getBoolean("checked18",false
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox19.isChecked()) {
-                    editor.putBoolean("checked19", true);
+                    editor.putBoolean("checkedAction19", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked19", false);
+                    editor.putBoolean("checkedAction19", false);
                     editor.apply();
                 }
             }
         }); 
-        if(preferences.contains("checked20") && preferences.getBoolean("checked20",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction20") && preferences.getBoolean("checkedAction20",false) == true) {
             checkBox20.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -547,15 +562,15 @@ if(preferences.contains("checked18") && preferences.getBoolean("checked18",false
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox20.isChecked()) {
-                    editor.putBoolean("checked20", true);
+                    editor.putBoolean("checkedAction20", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked20", false);
+                    editor.putBoolean("checkedAction20", false);
                     editor.apply();
                 }
             }
         }); 
-        if(preferences.contains("checked21") && preferences.getBoolean("checked21",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction21") && preferences.getBoolean("checkedAction21",false) == true) {
             checkBox21.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -567,15 +582,15 @@ if(preferences.contains("checked18") && preferences.getBoolean("checked18",false
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox21.isChecked()) {
-                    editor.putBoolean("checked21", true);
+                    editor.putBoolean("checkedAction21", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked21", false);
+                    editor.putBoolean("checkedAction21", false);
                     editor.apply();
                 }
             }
         });
-        if(preferences.contains("checked22") && preferences.getBoolean("checked22",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction22") && preferences.getBoolean("checkedAction22",false) == true) {
             checkBox22.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -587,15 +602,15 @@ if(preferences.contains("checked18") && preferences.getBoolean("checked18",false
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox22.isChecked()) {
-                    editor.putBoolean("checked22", true);
+                    editor.putBoolean("checkedAction22", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked22", false);
+                    editor.putBoolean("checkedAction22", false);
                     editor.apply();
                 }
             }
         });
-        if(preferences.contains("checked23") && preferences.getBoolean("checked23",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction23") && preferences.getBoolean("checkedAction23",false) == true) {
             checkBox23.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -607,16 +622,16 @@ if(preferences.contains("checked18") && preferences.getBoolean("checked18",false
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox23.isChecked()) {
-                    editor.putBoolean("checked23", true);
+                    editor.putBoolean("checkedAction23", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked23", false);
+                    editor.putBoolean("checkedAction23", false);
                     editor.apply();
                 }
             }
         });
 
-        if(preferences.contains("checked24") && preferences.getBoolean("checked24",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+        if(preferences.contains("checkedAction24") && preferences.getBoolean("checkedAction24",false) == true) {
             checkBox24.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -628,15 +643,15 @@ if(preferences.contains("checked18") && preferences.getBoolean("checked18",false
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox24.isChecked()) {
-                    editor.putBoolean("checked24", true);
+                    editor.putBoolean("checkedAction24", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked24", false);
+                    editor.putBoolean("checkedAction24", false);
                     editor.apply();
                 }
             }
         });
-       if(preferences.contains("checked25") && preferences.getBoolean("checked25",false) == true && DateUtils.isToday(mDate.getTimeInMillis())) {
+       if(preferences.contains("checkedAction25") && preferences.getBoolean("checkedAction25",false) == true) {
             checkBox25.setChecked(true);
             System.out.println("Checked");
         }else {
@@ -648,10 +663,10 @@ if(preferences.contains("checked18") && preferences.getBoolean("checked18",false
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if(checkBox25.isChecked()) {
-                    editor.putBoolean("checked25", true);
+                    editor.putBoolean("checkedAction25", true);
                     editor.apply();
                 }else{
-                    editor.putBoolean("checked25", false);
+                    editor.putBoolean("checkedAction25", false);
                     editor.apply();
                 }
             }

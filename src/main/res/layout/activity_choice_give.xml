@@ -40,60 +40,65 @@
 
             <Button
 
-                android:text="** Να βοηθάω τα αδέσποτα"
+                android:text="Να βοηθάω τα αδέσποτα"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/give_1"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star3"
                 android:background="@android:color/transparent"
                 android:onClick="Give_1"
                 android:paddingBottom="10dp"
                 android:textAllCaps="false" />
             <Button
 
-                android:text="*** Να είμαι ευγενικός με τους γύρω μου"
+                android:text="Να είμαι ευγενικός με τους γύρω μου"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/give_2"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star"
                 android:background="@android:color/transparent"
                 android:onClick="Give_2"
                 android:paddingBottom="10dp"
                 android:textAllCaps="false" />
             <Button
 
-                android:text="* Να δώσω συμβουλή σε συνάδελφο"
+                android:text="Να δώσω συμβουλή σε συνάδελφο"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/give_3"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star"
                 android:background="@android:color/transparent"
                 android:onClick="Give_3"
                 android:paddingBottom="10dp"
                 android:textAllCaps="false" />
             <Button
 
-                android:text="* Να δώσω πράγματα που δε χρειάζομαι"
+                android:text="Να δώσω πράγματα που δε χρειάζομαι"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/give_4"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star3"
                 android:background="@android:color/transparent"
                 android:onClick="Give_4"
                 android:paddingBottom="10dp"
                 android:textAllCaps="false" />
             <Button
 
-                android:text="** Να κεράσω καφέ σε κάποιον"
+                android:text="Να κεράσω καφέ σε κάποιον"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/give_5"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star2"
                 android:background="@android:color/transparent"
                 android:onClick="Give_5"
                 android:paddingBottom="10dp"

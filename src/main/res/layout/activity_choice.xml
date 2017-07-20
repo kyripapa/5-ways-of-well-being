@@ -40,24 +40,26 @@
 
             <Button
 
-                android:text="** Να κάνω μια βόλτα έξω από το σπίτι"
+                android:text="Να κάνω μια βόλτα έξω από το σπίτι"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/activity_1"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star2"
                 android:background="@android:color/transparent"
                 android:onClick="Activity_1"
                 android:paddingBottom="10dp"
                 android:textAllCaps="false" />
             <Button
 
-                android:text="** Να πάω στη δουλειά με τα πόδια / ποδήλατο"
+                android:text="Να πάω στη δουλειά με τα πόδια / ποδήλατο"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/activity_2"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star2"
                 android:background="@android:color/transparent"
                 android:onClick="Activity_2"
                 android:paddingBottom="10dp"
@@ -65,12 +67,13 @@
 
             <Button
 
-                android:text="*** Να πάω για τρέξιμο στη γειτονιά"
+                android:text="Να πάω για τρέξιμο στη γειτονιά"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/activity_3"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star3"
                 android:background="@android:color/transparent"
                 android:onClick="Activity_3"
                 android:paddingBottom="10dp"
@@ -78,24 +81,26 @@
 
             <Button
 
-                android:text="* Να πάρω τις σκάλες στη δουλειά αντί για ασανσέρ"
+                android:text="Να πάρω τις σκάλες στη δουλειά αντί για ασανσέρ"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/activity_4"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star"
                 android:background="@android:color/transparent"
                 android:onClick="Activity_4"
                 android:paddingBottom="10dp"
                 android:textAllCaps="false" />
             <Button
 
-                android:text="** Να πάω γυμναστήριο"
+                android:text="Να πάω γυμναστήριο"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/activity_5"
                 android:gravity="center_vertical"
                 android:drawableRight="@drawable/down"
+                android:drawableLeft="@drawable/star3"
                 android:background="@android:color/transparent"
                 android:onClick="Activity_5"
                 android:paddingBottom="10dp"

@@ -41,27 +41,27 @@ public class Aware_4 extends AppCompatActivity {
         RadioButton once = (RadioButton) findViewById(R.id.onetime);
         RadioButton twice = (RadioButton) findViewById(R.id.twotime);
         RadioButton week = (RadioButton) findViewById(R.id.oneweek);
-        if(preferences.contains("checked") && preferences.getBoolean("checked",false) == true) {
+        if(preferences.contains("checkedLook") && preferences.getBoolean("checkedLook",false) == true) {
             morning.setChecked(true);
             System.out.println("Checked");
         }
-        if(preferences.contains("checked2") && preferences.getBoolean("checked2",false) == true) {
+        if(preferences.contains("checkedLook2") && preferences.getBoolean("checkedLook2",false) == true) {
             noon.setChecked(true);
             System.out.println("Checked");
         }
-        if(preferences.contains("checked3") && preferences.getBoolean("checked3",false) == true) {
+        if(preferences.contains("checkedLook3") && preferences.getBoolean("checkedLook3",false) == true) {
             night.setChecked(true);
             System.out.println("Checked");
         }
-        if(preferences.contains("checked4") && preferences.getBoolean("checked4",false) == true) {
+        if(preferences.contains("checkedLook4") && preferences.getBoolean("checkedLook4",false) == true) {
             once.setChecked(true);
             System.out.println("Checked Once");
         }
-        if(preferences.contains("checked5") && preferences.getBoolean("checked5",false) == true) {
+        if(preferences.contains("checkedLook5") && preferences.getBoolean("checkedLook5",false) == true) {
             twice.setChecked(true);
             System.out.println("Checked");
         }
-        if(preferences.contains("checked6") && preferences.getBoolean("checked6",false) == true) {
+        if(preferences.contains("checkedLook6") && preferences.getBoolean("checkedLook6",false) == true) {
             week.setChecked(true);
             System.out.println("Checked");
         }
@@ -70,15 +70,15 @@ public class Aware_4 extends AppCompatActivity {
         for (Choices cn : choices) {
             if((cn.getType().equals("Look around")) && (cn.getChosen().equals("true") )) {
                 active.setChecked(true);
-                System.out.println("Is checked" + active);
+                System.out.println("Is checkedLook" + active);
             }
             else if ((cn.getType().equals("Look around")) && (cn.getChosen().equals("false") )){
-                editor.putBoolean("checked", false);
-                editor.putBoolean("checked2", false);
-                editor.putBoolean("checked3", false);
-                editor.putBoolean("checked4", false);
-                editor.putBoolean("checked5", false);
-                editor.putBoolean("checked6", false);
+                editor.putBoolean("checkedLook", false);
+                editor.putBoolean("checkedLook2", false);
+                editor.putBoolean("checkedLook3", false);
+                editor.putBoolean("checkedLook4", false);
+                editor.putBoolean("checkedLook5", false);
+                editor.putBoolean("checkedLook6", false);
                 editor.apply();
             }
         }
@@ -118,25 +118,25 @@ public class Aware_4 extends AppCompatActivity {
                         /*IF IT IS ACTIVE THEN UPDATE THE REST*/
                         if(morning.isChecked() == true) {
                             cn.setTime("morning");
-                            editor.putBoolean("checked", true);
-                            editor.putBoolean("checked2", false);
-                            editor.putBoolean("checked3", false);
+                            editor.putBoolean("checkedLook", true);
+                            editor.putBoolean("checkedLook2", false);
+                            editor.putBoolean("checkedLook3", false);
                             editor.apply();
                             db.updateContact(cn);
                         }
                         else if(noon.isChecked() == true) {
                             cn.setTime("noon");
-                            editor.putBoolean("checked2", true);
-                            editor.putBoolean("checked", false);
-                            editor.putBoolean("checked3", false);
+                            editor.putBoolean("checkedLook2", true);
+                            editor.putBoolean("checkedLook", false);
+                            editor.putBoolean("checkedLook3", false);
                             editor.apply();
                             db.updateContact(cn);
                         }
                         else {
                             cn.setTime("night");
-                            editor.putBoolean("checked3", true);
-                            editor.putBoolean("checked", false);
-                            editor.putBoolean("checked2", false);
+                            editor.putBoolean("checkedLook3", true);
+                            editor.putBoolean("checkedLook", false);
+                            editor.putBoolean("checkedLook2", false);
                             editor.apply();
                             db.updateContact(cn);
                         }
@@ -144,25 +144,25 @@ public class Aware_4 extends AppCompatActivity {
 
                         if(once.isChecked() == true) {
                             cn.setFrequency("once");
-                            editor.putBoolean("checked4", true);
-                            editor.putBoolean("checked5", false);
-                            editor.putBoolean("checked6", false);
+                            editor.putBoolean("checkedLook4", true);
+                            editor.putBoolean("checkedLook5", false);
+                            editor.putBoolean("checkedLook6", false);
                             editor.apply();
                             db.updateContact(cn);
                         }
                         else if(twice.isChecked() == true) {
                             cn.setFrequency("twice");
-                            editor.putBoolean("checked5", true);
-                            editor.putBoolean("checked6", false);
-                            editor.putBoolean("checked4", false);
+                            editor.putBoolean("checkedLook5", true);
+                            editor.putBoolean("checkedLook6", false);
+                            editor.putBoolean("checkedLook4", false);
                             editor.apply();
                             db.updateContact(cn);
                         }
                         else {
                             cn.setFrequency("week");
-                            editor.putBoolean("checked6", true);
-                            editor.putBoolean("checked4", false);
-                            editor.putBoolean("checked5", false);
+                            editor.putBoolean("checkedLook6", true);
+                            editor.putBoolean("checkedLook4", false);
+                            editor.putBoolean("checkedLook5", false);
                             editor.apply();
                             db.updateContact(cn);
                         }
@@ -188,12 +188,12 @@ public class Aware_4 extends AppCompatActivity {
 
                             System.out.println("Changed" + db.updateContact(cn));
                             System.out.println("Changed" + cn.getChosen());
-                            editor.putBoolean("checked", false);
-                            editor.putBoolean("checked2", false);
-                            editor.putBoolean("checked3", false);
-                            editor.putBoolean("checked4", false);
-                            editor.putBoolean("checked5", false);
-                            editor.putBoolean("checked6", false);
+                            editor.putBoolean("checkedLook", false);
+                            editor.putBoolean("checkedLook2", false);
+                            editor.putBoolean("checkedLook3", false);
+                            editor.putBoolean("checkedLook4", false);
+                            editor.putBoolean("checkedLook5", false);
+                            editor.putBoolean("checkedLook6", false);
                             editor.apply();
                         }
 
